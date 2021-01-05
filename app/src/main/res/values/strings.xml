@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ImageApp</string>
+    <string name="title_detail_images">Detail Images</string>
+    <string name="silahkan_tulis_di_sini">Silahkan tulis di sini...</string>
+    <string name="add_logo">Add Logo</string>
+    <string name="add_text">Add Text</string>
+    <string name="simpan">Simpan</string>
+    <string name="share">Share</string>
+    <string name="image_detail">Image detail</string>
+    <string name="facebook">Facebook</string>
+    <string name="twitter">Twitter</string>
+</resources>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.detail.DetailImageActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp">
+
+            <FrameLayout
+                android:id="@+id/fl_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/img_meme"
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp"
+                    android:background="@android:color/white"
+                    android:contentDescription="Image detail"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_baseline_image" />
+
+            </FrameLayout>
+
+            <EditText
+                android:id="@+id/edt_title_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:textColor="@color/teal_700"
+                android:hint="@string/silahkan_tulis_di_sini"
+                android:textColorHint="@color/teal_700"
+                android:gravity="top|left"
+                android:inputType="textEmailAddress|textMultiLine"
+                android:lines="13"
+                android:minLines="3"
+                android:scrollbars="vertical"
+                android:scrollHorizontally="false"
+                android:textSize="26dp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/fl_image"
+                tools:text="title image" />
+
+            <TextView
+                android:id="@+id/tv_title_addimage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/add_logo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fl_image" />
+
+            <TextView
+                android:id="@+id/tv_title_addtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="20dp"
+                android:text="@string/add_text"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_title_addimage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_title_addimage"
+                app:layout_constraintTop_toBottomOf="@+id/fl_image" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btn_add_image"
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+                android:layout_marginTop="10dp"
+                android:background="@null"
+                android:padding="6dp"
+                android:src="@drawable/ic_baseline_image"
+                app:layout_constraintEnd_toEndOf="@+id/tv_title_addimage"
+                app:layout_constraintStart_toStartOf="@+id/tv_title_addimage"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title_addimage" />
+
+            <TextView
+                android:id="@+id/tv_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="start"
+                android:text="T"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/tv_title_addtext"
+                app:layout_constraintStart_toStartOf="@+id/tv_title_addtext"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title_addtext" />
+
+            <LinearLayout
+                android:id="@+id/ll_save_share"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_add_image">
+
+                <Button
+                    android:id="@+id/btn_save"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:text="@string/simpan" />
+
+                <Button
+                    android:id="@+id/btn_share"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:text="@string/share" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
